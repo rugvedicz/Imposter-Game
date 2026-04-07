@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-primary: #8b5cf6;
+  --color-brand-secondary: #ec4899;
+  --color-brand-accent: #f97316;
+}
+
+body {
+  @apply antialiased bg-[#020617] text-white;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+.creative-bg {
+  @apply fixed inset-0 -z-10 bg-[#020617] overflow-hidden;
+}
+
+.blob {
+  @apply absolute rounded-full blur-[120px] opacity-60 mix-blend-screen animate-pulse;
+}
+
+.blob-1 {
+  @apply w-[500px] h-[500px] bg-purple-600/40 -top-20 -left-20;
+  animation: blob-float 20s infinite alternate;
+}
+
+.blob-2 {
+  @apply w-[600px] h-[600px] bg-blue-600/30 bottom-0 -right-20;
+  animation: blob-float 25s infinite alternate-reverse;
+}
+
+.blob-3 {
+  @apply w-[400px] h-[400px] bg-pink-600/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  animation: blob-float 15s infinite alternate;
+}
+
+@keyframes blob-float {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(100px, 50px) scale(1.1); }
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-2xl border border-white/10 shadow-2xl;
+}
+
+.glass-button {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20 hover:bg-white/20 transition-all duration-300 text-white;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-white via-white/90 to-white/70;
+}
+
+.gradient-button {
+  @apply bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white shadow-xl shadow-indigo-500/20 transition-all duration-300;
+}
+
+.card-shadow {
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/20;
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Imposter Game",
+  "description": "A multiplayer party game where players must find the imposter among them. Players are given a secret word, while the imposter only gets a hint.",
+  "requestFramePermissions": []
+}
