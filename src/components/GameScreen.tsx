@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Eye, EyeOff, ArrowRight, User, ShieldAlert, Sparkles } from 'lucide-react';
 import { Player } from '../types';
+import ImposterIcon from './ImposterIcon';
 
 interface GameScreenProps {
   players: Player[];
@@ -116,7 +117,7 @@ export default function GameScreen({ players, onFinish }: GameScreenProps) {
                     currentPlayer.role === 'imposter' ? 'bg-rose-500 shadow-rose-500/40' : 'bg-emerald-500 shadow-emerald-500/40'
                   }`}>
                     {currentPlayer.role === 'imposter' ? (
-                      <ShieldAlert className="w-14 h-14 text-white" />
+                      <ImposterIcon className="w-16 h-16" />
                     ) : (
                       <Sparkles className="w-14 h-14 text-white" />
                     )}

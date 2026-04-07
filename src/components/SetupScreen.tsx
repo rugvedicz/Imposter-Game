@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Users, Play, Minus, Plus } from 'lucide-react';
+import ImposterIcon from './ImposterIcon';
 
 interface SetupScreenProps {
   onStart: (playerCount: number) => void;
@@ -17,7 +18,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
         className="mb-16"
       >
         <div className="w-28 h-28 bg-white/5 backdrop-blur-3xl rounded-[2.5rem] flex items-center justify-center mx-auto mb-8 border border-white/10 shadow-[0_0_40px_rgba(79,70,229,0.2)] rotate-6">
-          <Users className="text-white w-14 h-14" />
+          <ImposterIcon className="w-16 h-16" />
         </div>
         <h1 className="text-6xl font-black text-white mb-4 tracking-tight gradient-text">Setup Game</h1>
         <p className="text-white/50 text-xl font-bold">How many players are joining?</p>

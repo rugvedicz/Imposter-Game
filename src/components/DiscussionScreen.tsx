@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageSquare, RotateCcw, Info, Eye, ShieldAlert, MessageCircle, Vote, User } from 'lucide-react';
 import { Player } from '../types';
+import ImposterIcon from './ImposterIcon';
 
 interface DiscussionScreenProps {
   players: Player[];
@@ -96,7 +97,7 @@ export default function DiscussionScreen({ players, onRestart }: DiscussionScree
                 className="p-8 bg-rose-500 text-white rounded-[3rem] shadow-2xl shadow-rose-500/40 border border-rose-400/30"
               >
                 <div className="flex items-center justify-center gap-4 mb-6">
-                  <ShieldAlert className="w-10 h-10" />
+                  <ImposterIcon className="w-12 h-12" />
                   <h3 className="text-3xl font-black uppercase tracking-tighter italic">Imposter Revealed</h3>
                 </div>
                 <div className="space-y-2">

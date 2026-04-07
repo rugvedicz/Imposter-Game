@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { User, UserPlus, Play, Sparkles, ShieldAlert, Users, LogIn } from 'lucide-react';
+import { User, UserPlus, Play, Sparkles, Users, LogIn } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import ImposterIcon from '../components/ImposterIcon';
 
 interface LandingPageProps {
   onGuest: () => void;
@@ -34,7 +35,7 @@ export default function LandingPage({ onGuest, onLogin, onSignup }: LandingPageP
               transition={{ repeat: Infinity, duration: 8 }}
               className="w-40 h-40 bg-white/5 backdrop-blur-3xl rounded-[3rem] flex items-center justify-center border border-white/10 shadow-[0_0_50px_rgba(79,70,229,0.3)]"
             >
-              <ShieldAlert className="text-white w-20 h-20" />
+              <ImposterIcon className="w-24 h-24" />
             </motion.div>
             <motion.div 
               animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
